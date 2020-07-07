@@ -1,13 +1,17 @@
 @font-face {
   font-family: yoxall;
-  src: url(./fonts/YOXALL_B.TTF);
+  src: url(../fonts/YOXALL_B.TTF);
 }
-
+@font-face {
+  font-family: luxia;
+  src: url(../fonts/Luxia-Regular.otf);
+}
 :root {
   font-size: 16px;
   --darkone: #1a1b1c;
   --lightone: #fafcfe;
-  --redone: #ff5757;
+  --redone: #ff5757; /* if needed */
+  --luxurycolor: #eed291;
 }
 
 * {
@@ -41,4 +45,122 @@ body {
 .home_header {
   max-width: 356px;
   margin: 82px 0 16px 0;
+}
+.home_title {
+  font-family: yoxall, sans-serif;
+  font-size: 4.125rem;
+  color: var(--darkone);
+  line-height: 105%;
+  margin-bottom: 50px;
+}
+
+.home_spacebetween {
+  display: inline-block;
+  height: 3px;
+  width: 105px;
+  background-color: var(--luxurycolor);
+  margin-bottom: 48px;
+}
+
+.home_text {
+  font-family: Open Sans, sans-serif;
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: var(--darkone);
+  line-height: 170%;
+  margin-bottom: 48px;
+}
+
+.home_btn {
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  font-family: Open Sans, sans-serif;
+  font-weight: 700;
+  font-size: 0.625rem;
+  color: var(--lightone);
+  background-color: var(--darkone);
+  border-radius: 50px;
+  border: 2px solid var(--darkone);
+  padding: 16px 48px;
+  transition-property: background-color, color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+.home_btn:hover {
+  background-color: var(--lightone);
+  color: var(--darkone);
+}
+
+.home_cards {
+  grid-column: 2/3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 8px;
+}
+
+.first-group {
+  grid-column: 1 / span 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.first-group .home_card--square {
+  background-image: linear-gradient(
+      180deg,
+      rgba(26, 27, 28, 0) 50%,
+      rgba(26, 27, 28, 0.2) 74.85%,
+      rgba(26, 27, 28, 0.4) 100%
+    ),
+    url(../assets/figma/martino-pietropoli.png);
+}
+.first-group .home_card--large {
+  background-image: linear-gradient(
+      180deg,
+      rgba(26, 27, 28, 0) 50%,
+      rgba(26, 27, 28, 0.2) 74.85%,
+      rgba(26, 27, 28, 0.4) 100%
+    ),
+    url(../assets/figma/sharon-pittaway.png);
+}
+.second-group {
+  grid-column: 2 / span 2;
+  display: flex;
+  flex-direction: column;
+}
+.second-group .home_card--square {
+  background-image: linear-gradient(
+      180deg,
+      rgba(26, 27, 28, 0) 50%,
+      rgba(26, 27, 28, 0.2) 74.85%,
+      rgba(26, 27, 28, 0.4) 100%
+    ),
+    url(../assets/figma/federica-campanaro.png);
+}
+
+.second-group .home_card--large {
+  background-image: linear-gradient(
+      180deg,
+      rgba(26, 27, 28, 0) 50%,
+      rgba(26, 27, 28, 0.2) 74.85%,
+      rgba(26, 27, 28, 0.4) 100%
+    ),
+    url(../assets/figma/mathew-schwartz.png);
+}
+.home_card {
+  margin: 8px;
+  padding: 16px;
+  display: flex;
+  align-items: flex-end;
+  background-color: var(--darkone);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.home_card--square {
+  height: 35%;
+}
+.home_card--large {
+  height: 59%;
 }

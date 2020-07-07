@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style/main.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
       rel="stylesheet"
@@ -14,10 +14,11 @@
   <body>
     <button id="hamburger" class="hamburger" onclick="handle()"></button>
     <nav id="main-nav" class="main-nav">
-      <a href="#" onclick="handel()"></a>
-      <a href="#" onclick="handle()"></a>
-      <a href="#" onclick="handle()"></a>
-      <a href="#" onclick="handle()"></a>
+      <a href="#" onclick="handel()">Home</a>
+      <a href="#" onclick="handle()">About Us</a>
+      <a href="#" onclick="handle()">Products</a>
+      <a href="#" onclick="handle()">Gallery</a>
+      <a href="#" onclick="handle()">Contact</a>
     </nav>
     <main class="home">
       <section class="home_info">
@@ -33,15 +34,21 @@
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
           </p>
-          <a href="" class="hom_btn">Support</a>
+          <a href="" class="hom_btn">About Us</a>
         </header>
       </section>
       <section class="home_cards">
         <div class="first-group">
           <div class="home_card home_card--square">
             <header>
-              <img src="./assets/Martino-profile.png" alt="Martino Pietro" />
+              <img src="./assets/figma/Martino-profile.png" alt="Martino Pietro" />
               <h3><a href="#">Martino Pietro</a></h3>
+            </header>
+          </div>
+          <div class="home_card home_card--large">
+            <header>
+              <img src="./assets/figma/Shanon-profile.PNG" alt="Shannon Pittaway" />
+              <h3><a href="#">Shannon Pittaway</a></h3>
             </header>
           </div>
         </div>
@@ -49,22 +56,20 @@
           <div class="home_card home_card--large">
             <header>
               <img
-                src="./assets/Frederica-profile.PNG"
+                src="./assets/figma/Frederica-profile.PNG"
                 alt="Frederica Campanaro"
               />
               <h3><a href="#">Frederica Campanaro</a></h3>
             </header>
           </div>
-        </div>
-        <div class="third-group">
-          <div class="home_card home_card--large">
+          <div class="home_card home_card--square">
             <header>
-              <img src="./assets/Mathew-profile.PNG" alt="Mathew schwartz" />
+              <img src="./assets/figma/Mathew-profile.PNG" alt="Mathew schwartz" />
               <h3><a href="#">Mathew Schwartz</a></h3>
             </header>
           </div>
-        </div>
       </section>
     </main>
+    <script type="text/javascript" src="./js/app.js"></script>
   </body>
 </html>

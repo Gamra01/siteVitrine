@@ -10,7 +10,7 @@
   font-size: 16px;
   --darkone: #1a1b1c;
   --lightone: #fafcfe;
-  --redone: #ff5757; /* if needed */
+  --redone: #ff5757; /* for border form */
   --luxurycolor: #eed291;
 }
 
@@ -67,8 +67,8 @@ body {
   font-weight: 400;
   font-size: 0.8rem;
   color: var(--darkone);
-  line-height: 170%;
-  margin-bottom: 48px;
+  line-height: 180%;
+  margin-bottom: 30px;
 }
 
 .home_btn {

@@ -1,0 +1,74 @@
+/* hamburger */
+.hamburger {
+  position: absolute;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  background-color: var(--darkone);
+  border: none;
+  border-radius: 10px;
+  top: 16px;
+  left: 16px;
+  z-index: 10;
+  transition: border 0.3s ease;
+}
+
+/* .hamburger:focus,
+.hamrger:active {
+  outline: 5px solid var(--luxurycolor);
+} */
+
+.hamburger::after,
+.hamburger::before {
+  content: "";
+  height: 20px;
+  border-left: 1px solid var(--lightone);
+  transform: rotate(90deg);
+  margin: -3px;
+  transition: transform 0.3s ease;
+}
+
+.hamburger-open::after {
+  transform: rotate(135deg);
+}
+
+.hamburger-open::before {
+  transform: rotate(45deg);
+}
+
+.main-nav {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 30%;
+  background-color: var(--luxurycolor);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 5;
+}
+.main-nav-open {
+  transform: translateX(0);
+}
+
+.main-nav a {
+  font-family: yoxall, sans-serif;
+  font-size: 2.2rem;
+  /* line-height: 150%; */
+  color: var(--darkone);
+  text-decoration: none;
+  padding: 12px 0;
+  margin: 16px;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.3s ease;
+}
+
+.main-nav a:hover {
+  border-bottom: 2px solid var(--lightone);
+}

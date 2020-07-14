@@ -12,6 +12,8 @@
   --lightone: #fafcfe;
   --redone: #ff5757; /* for border form */
   --luxurycolor: #eed291;
+  --secondary: #ccb98d;
+  --space20: 20px;
 }
 
 * {
@@ -62,7 +64,8 @@ body {
   margin-bottom: 48px;
 }
 
-.home_text {
+.home_text,
+.about_text {
   font-family: Open Sans, sans-serif;
   font-weight: 400;
   font-size: 0.8rem;
@@ -165,4 +168,103 @@ body {
   height: 59%;
 }
 
-/* media queries */
+/* media queries home */
+
+/* end media queries home */
+
+/* ------------------ About page -------------------*/
+.about {
+  min-height: 500px;
+  display: grid;
+  grid-template-columns: 1fr repeat(12, minmax(auto, 60px)) 1fr;
+  grid-column-gap: 40px;
+  align-items: center;
+  background-color: var(--lightone);
+  padding: 50px;
+}
+
+.about_left {
+  grid-column-start: 3;
+  grid-column-end: span 5;
+}
+
+.about_right {
+  grid-column-start: 9;
+  grid-column-end: span 5;
+  display: flex;
+  justify-content: center;
+}
+
+.about_header {
+  font-family: yoxall, sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  color: var(--darkone);
+  margin-bottom: var(--space20);
+}
+
+.about_cta {
+  font-family: yoxall, sans-serif;
+  color: var(--secondary);
+  font-weight: 700;
+  font-size: 18px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s all ease;
+}
+
+.about_cta:hover {
+  color: var(--darkone);
+}
+
+@media only screen and (max-width: 960px) {
+  .about {
+    grid-column-gap: 10px;
+  }
+  .about_left {
+    order: 2;
+    grid-column-start: 2;
+    grid-column-end: 12;
+  }
+  .about_right {
+    order: 1;
+    grid-column-start: 2;
+    grid-column-end: 12;
+    margin-bottom: var(--space20);
+  }
+}
+
+/* Contact form */
+.form {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-weight: 400;
+  font-family: yoxall, sans-serif;
+  font-size: 16px;
+}
+
+.submit_btn {
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  font-family: Open Sans, sans-serif;
+  font-weight: 700;
+  font-size: 0.625rem;
+  color: var(--lightone);
+  background-color: var(--darkone);
+  padding: 16px 48px;
+  transition-property: background-color, color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  box-shadow: 5px 5px 5px lightgray;
+  margin-top: 20px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.submit_btn:hover {
+  background-color: var(--luxurycolor);
+  color: var(--darkone);
+}

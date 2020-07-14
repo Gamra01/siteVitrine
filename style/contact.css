@@ -44,11 +44,13 @@ li {
 input {
   outline: none;
   border: none;
+  background-color: var(--lightone);
 }
 
 textarea {
   outline: none;
   border: none;
+  background-color: var(--lightone);
 }
 
 textarea:focus,

@@ -1,3 +1,4 @@
+// +++++++++++++++++++++++++ [ navbar ] +++++++++++++++++++++++++++++++++
 function openNav() {
   const nav = document.getElementById("main-nav");
   const hamburger = document.getElementById("hamburger");
@@ -13,9 +14,7 @@ function openNav() {
   }
 }
 
-// gallery
-
-// contact
+// +++++++++++++++++++++++++ [ Contact ] +++++++++++++++++++++++++++++++++
 
 (function($) {
   "use strict";
@@ -35,7 +34,6 @@ function openNav() {
     });
   });
 
-  /*VALIDATION*/
   let name = $('.validate-input input[name="name"]');
   let email = $('.validate-input input[name="email"]');
   let message = $('.validate-input textarea[name="message"]');
@@ -94,3 +92,4 @@ function openNav() {
     $(thisAlert).removeClass("alert-validate");
   }
 })(jQuery);
+// +++++++++++++++++++++++++ [ Gallery ] +++++++++++++++++++++++++++++++++

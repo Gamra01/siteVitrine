@@ -93,3 +93,10 @@ function openNav() {
   }
 })(jQuery);
 // +++++++++++++++++++++++++ [ Gallery ] +++++++++++++++++++++++++++++++++
+$(".gallery").magnificPopup({
+  delegate: "a",
+  type: "image",
+  gallery: {
+    enabled: true,
+  },
+});
